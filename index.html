@@ -1,118 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recheal Oluchi | AI Growth Engineer & Founder</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-        :root { --pink: #ff71ce; --blue: #01cdfe; }
-        body { margin: 0; background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #030305 100%); color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        canvas { position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none; }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, var(--pink), var(--blue), #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-elite { background: linear-gradient(45deg, var(--pink), var(--blue)); color: black; font-weight: 800; transition: all 0.4s ease; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 2.5rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .image-frame { border-radius: 3rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.5s; }
-        .image-frame:hover { border-color: var(--pink); box-shadow: 0 0 30px rgba(255, 113, 206, 0.3); }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Recheal Oluchi | AI Video Strategist</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<style>
+body {
+  margin: 0;
+  background: #05070f;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #ff71ce, #01cdfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  background: linear-gradient(45deg, #ff71ce, #01cdfe);
+  color: black;
+  font-weight: bold;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+</style>
 </head>
+
 <body>
-    <canvas id="bg"></canvas>
 
-    <main class="relative z-10">
-        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24 backdrop-blur-2xl border-b border-white/5">
-            <div class="text-xl font-black uppercase italic">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
-            <a href="mailto:rechealoluchi031@gmail.com" class="text-[10px] font-black uppercase border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">Contact Founder</a>
-        </nav>
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-black/50 backdrop-blur-lg">
+  <h1 class="font-bold">RECHEAL</h1>
+  <div class="flex gap-6 text-sm">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#case" class="nav-link">Case Study</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+</nav>
 
-        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-24 pt-40 pb-24">
-            <h1 class="text-5xl md:text-9xl font-black mb-10 leading-[0.85] max-w-7xl tracking-tighter">
-                I Create <span class="text-gradient">High-Retention Videos</span> Using AI.
-            </h1>
+<!-- HERO -->
+<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 relative">
 
-            <div class="w-full max-w-5xl mb-16">
-                <div class="video-wrapper glass shadow-2xl">
-                    <iframe src="https://www.youtube.com/embed/P1myORd0TAk?rel=0&modestbranding=1" title="Portfolio" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="#about" class="btn-elite px-14 py-6 rounded-full uppercase tracking-widest text-sm shadow-xl shadow-pink-500/20">Meet The Founder</a>
-            </div>
-        </section>
+<div class="absolute inset-0 -z-10 opacity-20">
+  <img src="1001619386.png" class="w-full h-full object-cover scale-110">
+</div>
 
-        <section id="about" class="py-32 px-6 md:px-24 bg-black/40">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr,1.5fr] gap-20 items-center">
-                
-                <div class="image-frame aspect-[3/4] glass relative">
-                    <img src="1001619386.png" class="w-full h-full object-cover" alt="Founder">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8">
-                        <h4 class="text-3xl font-black text-white">Recheal Oluchi</h4>
-                        <p class="text-xs uppercase font-bold text-[#ff71ce] tracking-[0.3em] mt-2">Founder | AI Strategist</p>
-                    </div>
-                </div>
+<div class="w-full max-w-5xl mb-10">
+<iframe class="w-full h-[250px] md:h-[500px] rounded-2xl"
+src="https://www.youtube.com/embed/P1myORd0TAk?autoplay=1&mute=1&loop=1&playlist=P1myORd0TAk&controls=0"
+frameborder="0" allowfullscreen></iframe>
+</div>
 
-                <div>
-                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">Meet The <br><span class="text-gradient">Growth Engineer.</span></h2>
-                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
-                        I am the Founder of **Olurich Digital World**. I specialize in designing attention systems using AI to help brands turn ideas into scroll-stopping videos.
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="glass p-6 rounded-2xl border-l-4 border-[#ff71ce]">
-                            <h5 class="font-bold text-white text-sm">250+ Professionals</h5>
-                            <p class="text-xs text-gray-500">Trained in AI content literacy.</p>
-                        </div>
-                        <div class="glass p-6 rounded-2xl border-l-4 border-[#01cdfe]">
-                            <h5 class="font-bold text-white text-sm">0 to 100+ Subs</h5>
-                            <p class="text-xs text-gray-400 text-xs">Rapid growth achieved in 10 days.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<h1 class="text-4xl md:text-7xl font-black max-w-4xl">
+I Turn Ideas Into <span class="text-gradient">High-Retention Videos</span> That Grow Brands Using AI
+</h1>
 
-        <section class="py-32 px-6 md:px-24">
-            <div class="glass p-8 md:p-20 rounded-[4rem] text-center border-white/5">
-                <h2 class="text-4xl md:text-6xl font-black mb-8">AI <span class="text-[#01cdfe]">Evolution.</span></h2>
-                <div class="relative w-full max-w-md mx-auto image-frame">
-                    <img src="1001650732.jpg" class="w-full h-auto opacity-90" alt="AI Design">
-                </div>
-            </div>
-        </section>
+<p class="text-gray-300 mt-6 max-w-2xl">
+I help brands create content people actually watch, engage with, and come back to — not scroll past.
+</p>
 
-        <footer class="py-12 text-center text-[10px] text-gray-700 uppercase tracking-[0.5em]">
-            © 2026 Olurich Digital World • Recheal Oluchi
-        </footer>
-    </main>
+<a href="#contact" class="btn px-8 py-4 rounded-full mt-8">Work With Me</a>
 
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.position.setZ(40);
+<div class="grid md:grid-cols-3 gap-4 mt-12 max-w-4xl">
+<div class="glass p-4">0 → 100 Subscribers in 10 days</div>
+<div class="glass p-4">250+ People Trained</div>
+<div class="glass p-4">2.3K+ Views per Video</div>
+</div>
 
-        const geometry = new THREE.IcosahedronGeometry(20, 0);
-        const material = new THREE.MeshPhysicalMaterial({ color: 0xffffff, wireframe: true, transparent: true, opacity: 0.15 });
-        const shape = new THREE.Mesh(geometry, material);
-        scene.add(shape);
+</section>
 
-        const pLight = new THREE.PointLight(0xff71ce, 20); pLight.position.set(20, 20, 20); scene.add(pLight);
-        const bLight = new THREE.PointLight(0x01cdfe, 20); bLight.position.set(-20, -20, 20); scene.add(bLight);
+<!-- ABOUT -->
+<section id="about" class="py-20 px-6 md:px-20">
+<div class="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
 
-        function animate() {
-            requestAnimationFrame(animate);
-            shape.rotation.y += 0.0015;
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
+<img src="1001619386.png" class="rounded-2xl">
+
+<div>
+<h2 class="text-3xl font-bold mb-4">Meet The Growth Engineer</h2>
+<p class="font-semibold mb-3">I don’t just create videos. I engineer attention.</p>
+
+<p class="text-gray-300">
+I’m the founder of Olurich Digital World, and I design attention systems using AI, storytelling, and video psychology.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="case" class="py-20 px-6 md:px-20 text-center">
+
+<h2 class="text-3xl font-bold mb-8">Featured Case Study</h2>
+
+<div class="glass p-8 max-w-3xl mx-auto text-left">
+<h3 class="font-bold mb-3">MindBender Arena X</h3>
+<ul class="text-gray-300 space-y-2">
+<li>• Built AI-powered video system</li>
+<li>• Grew 0 → 100 subscribers in 10 days</li>
+<li>• 2.3K+ views per video</li>
+<li>• Optimized retention hooks</li>
+</ul>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 text-center">
+
+<h2 class="text-3xl font-bold mb-8">What I Help Brands Achieve</h2>
+
+<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+<div class="glass p-6">AI Video Editing</div>
+<div class="glass p-6">Podcast Content Creation</div>
+<div class="glass p-6">Short-form Content</div>
+<div class="glass p-6">AI Strategy</div>
+</div>
+
+</section>
+
+<!-- WHO -->
+<section class="py-20 text-center">
+
+<h2 class="text-3xl font-bold mb-8">Who I Work With</h2>
+
+<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+<div class="glass p-6">Brands serious about growth</div>
+<div class="glass p-6">Creators building audience</div>
+<div class="glass p-6">Businesses investing in content</div>
+<div class="glass p-6">Founders who want attention</div>
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-20 text-center">
+
+<h2 class="text-3xl font-bold mb-8">What People Say</h2>
+
+<div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+<div class="glass p-6">
+“Her training changed how I create content.”
+</div>
+<div class="glass p-6">
+“Her strategy is different — it drives growth.”
+</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 text-center">
+
+<h2 class="text-3xl font-bold mb-4">
+Let’s create content your audience won’t scroll past.
+</h2>
+
+<p class="text-gray-400 mb-6">
+Click below to send me an email and let’s get started.
+</p>
+
+<a href="mailto:rechealoluchi031@gmail.com" class="btn px-8 py-4 rounded-full">
+Work With Me
+</a>
+
+</section>
+
+<footer class="text-center text-gray-500 py-10 text-sm">
+© 2026 Recheal Oluchi
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray("section").forEach(section => {
+gsap.from(section, {
+opacity: 0,
+y: 60,
+duration: 1,
+scrollTrigger: {
+trigger: section,
+start: "top 85%"
+}
+});
+});
+</script>
+
 </body>
 </html>
