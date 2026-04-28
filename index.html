@@ -3,126 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recheal Oluchi | AI Video Strategist</title>
+    <title>Recheal Oluchi | AI Growth Engineer & Founder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-        body { margin: 0; background-color: #030305; color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        canvas { position: fixed; top: 0; left: 0; outline: none; z-index: -1; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(to right, #ff71ce, #01cdfe, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-pink { background: #ff71ce; color: black; transition: all 0.3s ease; }
-        .btn-pink:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 113, 206, 0.4); }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 2rem; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .trust-tag { border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); padding: 4px 12px; rounded-full; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #aaa; }
+        
+        :root { --pink: #ff71ce; --blue: #01cdfe; --white: #ffffff; }
+
+        body { 
+            margin: 0; 
+            background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #030305 100%);
+            color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; 
+        }
+
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none; }
+
+        /* Animated Background Glows */
+        .bg-glow { position: fixed; width: 60vw; height: 60vw; border-radius: 50%; filter: blur(120px); opacity: 0.12; z-index: -1; pointer-events: none; animation: move 20s infinite alternate; }
+        @keyframes move { from { transform: translate(-10%, -10%); } to { transform: translate(15%, 15%); } }
+
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); transition: all 0.4s ease; }
+        .glass:hover { border-color: var(--pink); background: rgba(255, 255, 255, 0.05); }
+
+        .text-gradient { background: linear-gradient(to right, var(--pink), var(--blue), var(--white)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .btn-elite { background: linear-gradient(45deg, var(--pink), var(--blue)); color: black; font-weight: 800; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .btn-elite:hover { transform: scale(1.05) translateY(-3px); box-shadow: 0 15px 30px rgba(255, 113, 206, 0.4); }
+
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; border-radius: 2.5rem; overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.1); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        .trust-pill { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 18px; border-radius: 100px; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em; color: var(--blue); }
+        
+        .image-frame { border-radius: 3rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.5s ease; }
+        .image-frame:hover { transform: scale(1.02); border-color: var(--pink); box-shadow: 0 0 40px rgba(255, 113, 206, 0.2); }
     </style>
 </head>
 <body>
 
     <canvas id="bg"></canvas>
+    <div class="bg-glow" style="background: var(--pink); top: -10%; left: -10%;"></div>
+    <div class="bg-glow" style="background: var(--blue); bottom: -10%; right: -10%; animation-delay: -5s;"></div>
 
     <main class="relative z-10">
-        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24 bg-black/40 backdrop-blur-md">
-            <div class="text-xl font-black tracking-tighter uppercase">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
-            <a href="mailto:rechealoluchi031@gmail.com" class="text-xs font-bold uppercase text-[#01cdfe] border border-[#01cdfe]/30 px-5 py-2 rounded-full transition hover:bg-[#01cdfe]/10">Work With Me</a>
+        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24 backdrop-blur-2xl border-b border-white/5">
+            <div class="text-xl font-black tracking-tighter uppercase italic">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
+            <a href="mailto:rechealoluchi031@gmail.com" class="text-[10px] font-black uppercase tracking-widest border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition duration-500">Contact Founder</a>
         </nav>
 
-        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-24 pt-32 pb-20">
-            <div class="w-full max-w-4xl mb-16 transform transition duration-700 hover:scale-[1.01]">
-                <div class="video-container shadow-2xl shadow-[#ff71ce]/10">
-                    <iframe src="https://www.youtube.com/embed/vQRZsejThtE" title="Recheal Oluchi AI Portfolio" frameborder="0" allowfullscreen></iframe>
-                </div>
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-24 pt-40 pb-24">
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <span class="trust-pill">FOUNDER: OLURICH DIGITAL WORLD</span>
+                <span class="trust-pill" style="color: var(--pink);">AI VISIBILITY STRATEGIST</span>
             </div>
 
-            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[0.9] max-w-5xl tracking-tight">
-                I Create High-Retention <br> <span class="text-gradient">AI-Powered Videos</span> That Grow Brands.
+            <h1 class="text-5xl md:text-9xl font-black mb-10 leading-[0.85] max-w-7xl tracking-tighter">
+                I Create <span class="text-gradient">High-Retention Videos</span> Using AI.
             </h1>
+
+            <div class="w-full max-w-5xl mb-16 transform transition duration-700 hover:scale-[1.01]">
+                <div class="video-wrapper glass shadow-2xl shadow-blue-500/10">
+                    <iframe src="https://www.youtube.com/embed/vQRZsejThtE" title="Portfolio" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
             
-            <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <span class="trust-tag">0 → 100 SUBS IN 10 DAYS</span>
-                <span class="trust-tag">250+ PROFESSIONALS TRAINED</span>
-                <span class="trust-tag">AI CONTENT SYSTEMS</span>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#work" class="btn-pink px-12 py-4 rounded-full font-black uppercase tracking-wide text-sm">See Case Studies</a>
-                <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-12 py-4 rounded-full font-bold uppercase tracking-wide text-sm border-white/20 hover:bg-white/10 transition">LinkedIn Profile</a>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#work" class="btn-elite px-14 py-6 rounded-full uppercase tracking-widest text-sm shadow-xl shadow-pink-500/20">See The Proof</a>
+                <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-14 py-6 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition">LinkedIn Profile</a>
             </div>
         </section>
 
-        <section id="work" class="py-24 px-6 md:px-24 bg-white/[0.02] border-y border-white/5">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div>
-                    <h3 class="text-6xl font-black text-[#ff71ce] mb-2">2.3K+</h3>
-                    <p class="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase">Avg. Views Per Clip</p>
+        <section class="py-16 bg-white/[0.02] border-y border-white/5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-24 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="text-6xl font-black text-[#ff71ce]">12 DAYS</span>
+                    <span class="text-[11px] text-gray-500 uppercase tracking-widest mt-2 font-bold leading-none">0 to 100+ Subs<br>Rapid Growth</span>
                 </div>
-                <div>
-                    <h3 class="text-6xl font-black text-[#01cdfe] mb-2">12 Days</h3>
-                    <p class="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase">Growth Velocity</p>
+                <div class="flex flex-col items-center">
+                    <span class="text-6xl font-black text-[#01cdfe]">250+</span>
+                    <span class="text-[11px] text-gray-500 uppercase tracking-widest mt-2 font-bold leading-none">Professionals<br>Trained</span>
                 </div>
-                <div>
-                    <h3 class="text-6xl font-black text-white mb-2">100%</h3>
-                    <p class="text-xs font-bold text-gray-500 tracking-[0.2em] uppercase">AI Workflow</p>
+                <div class="flex flex-col items-center">
+                    <span class="text-6xl font-black text-white">2.3K+</span>
+                    <span class="text-[11px] text-gray-500 uppercase tracking-widest mt-2 font-bold leading-none">Organic Views<br>Per Clip</span>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 px-6 md:px-24">
-            <h2 class="text-4xl font-black mb-12">Who I've <span class="text-[#ff71ce]">Impacted</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass p-10 rounded-[2.5rem]">
-                    <h4 class="text-xl font-bold mb-2">StoryX Lab</h4>
-                    <p class="text-gray-400 text-sm italic mb-4">Facilitated virtual AI training for professionals.</p>
-                    <p class="text-gray-300">Simplified complex AI concepts into actionable growth strategies, empowering participants to master new-age tools.</p>
+        <section id="work" class="py-32 px-6 md:px-24 bg-black/40">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr,1.5fr] gap-20 items-center">
+                
+                <div class="image-frame aspect-[3/4] glass relative">
+                    <img src="1001619386.png" class="w-full h-full object-cover" alt="Recheal Oluchi - Founder">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h4 class="text-3xl font-black">Recheal Oluchi</h4>
+                        <p class="text-xs uppercase font-bold text-[#ff71ce] tracking-[0.3em] mt-2">Founder | AI Strategist</p>
+                    </div>
                 </div>
-                <div class="glass p-10 rounded-[2.5rem]">
-                    <h4 class="text-xl font-bold mb-2">DigiTech Academy</h4>
-                    <p class="text-gray-400 text-sm italic mb-4">AI Tutorial & Training Lead.</p>
-                    <p class="text-gray-300">Delivered sessions to 250+ individuals, focusing on high-retention content creation and digital scaling.</p>
+
+                <div>
+                    <span class="text-xs uppercase font-bold text-[#01cdfe] tracking-widest mb-4 inline-block">Visionary Leader</span>
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">Meet The <br><span class="text-gradient">Growth Engineer.</span></h2>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        I don’t just create content; I design attention systems. As the Founder of **Olurich Digital World**, I help brands turn ideas into scroll-stopping videos that drive actual engagement.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="glass p-6 rounded-2xl border-l-4 border-[#ff71ce]">
+                            <h5 class="font-bold text-white mb-2 italic text-sm">StoryX Lab</h5>
+                            <p class="text-xs text-gray-500 leading-relaxed">Facilitated training sessions simplifying complex AI concepts for professional teams.</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl border-l-4 border-[#01cdfe]">
+                            <h5 class="font-bold text-white mb-2 italic text-sm">Better With Tech</h5>
+                            <p class="text-xs text-gray-500 leading-relaxed">Engineered viral video shorts that directly powered platform visibility and growth.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-40 px-6 text-center">
-            <h2 class="text-4xl md:text-7xl font-black mb-10 leading-tight">
-                Ready to stop <br>the <span class="text-gradient">scroll?</span>
+        <section class="py-32 px-6 md:px-24">
+            <div class="glass p-8 md:p-20 rounded-[4rem] border-white/5 relative overflow-hidden text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-6xl font-black mb-8">Digital <span class="text-[#01cdfe]">Evolution.</span></h2>
+                    <p class="text-gray-400 mb-16 text-lg">My work blends human creativity with advanced AI character engineering to create content that feels impossible.</p>
+                    
+                    <div class="relative w-full max-w-lg mx-auto">
+                        <div class="image-frame">
+                            <img src="1001650732.jpg" class="w-full h-auto opacity-90 shadow-2xl shadow-blue-500/20" alt="AI Character Design">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-blue-600 px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest shadow-xl">AI-Generated Asset</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-48 px-6 text-center bg-black/20">
+            <h2 class="text-5xl md:text-8xl font-black mb-12 leading-[0.95]">
+                Let's Build Your <br><span class="text-gradient">Digital Reality.</span>
             </h2>
-            <a href="mailto:rechealoluchi031@gmail.com" class="btn-pink px-16 py-6 rounded-full font-black text-2xl tracking-tight shadow-xl shadow-[#ff71ce]/20">Work With Me</a>
+            <a href="mailto:rechealoluchi031@gmail.com" class="btn-elite px-16 py-6 rounded-full text-2xl tracking-tight shadow-2xl shadow-[#ff71ce]/30 hover:scale-110 transition duration-500">Hire The Founder</a>
         </section>
+
+        <footer class="py-12 border-t border-white/5 text-center text-[10px] text-gray-700 uppercase tracking-[0.5em]">
+            © 2026 Olurich Digital World • Recheal Oluchi
+        </footer>
     </main>
 
     <script>
+        // --- PERFORMANCE OPTIMIZED 3D ---
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true, alpha: true });
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.position.setZ(30);
+        camera.position.setZ(40);
 
-        const geometry = new THREE.TorusKnotGeometry(12, 2.5, 150, 16);
+        // Core 3D Geometry
+        const geometry = new THREE.IcosahedronGeometry(20, 0);
         const material = new THREE.MeshPhysicalMaterial({ 
-            color: 0xffffff, metalness: 0.1, roughness: 0.2, transmission: 0.8, thickness: 1.5, transparent: true, opacity: 0.4 
+            color: 0xffffff, metalness: 0.1, roughness: 0.2, transmission: 0.9, thickness: 2, transparent: true, opacity: 0.2, wireframe: true
         });
         const shape = new THREE.Mesh(geometry, material);
         scene.add(shape);
 
-        const pLight = new THREE.PointLight(0xff71ce, 20); pLight.position.set(15, 10, 10); scene.add(pLight);
-        const bLight = new THREE.PointLight(0x01cdfe, 20); bLight.position.set(-15, -10, 10); scene.add(bLight);
-        scene.add(new THREE.AmbientLight(0xffffff, 0.2));
+        // Vibrant 3-Point Lighting
+        const pLight = new THREE.PointLight(0xff71ce, 25); pLight.position.set(20, 20, 20); scene.add(pLight);
+        const bLight = new THREE.PointLight(0x01cdfe, 25); bLight.position.set(-20, -20, 20); scene.add(bLight);
+        const dLight = new THREE.DirectionalLight(0xffffff, 0.4); dLight.position.set(0, 0, 5); scene.add(dLight);
 
         function animate() {
             requestAnimationFrame(animate);
-            shape.rotation.y += 0.0015;
-            shape.rotation.x += 0.001;
+            shape.rotation.y += 0.001; shape.rotation.x += 0.0012;
             renderer.render(scene, camera);
         }
 
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(shape.rotation, { z: Math.PI, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
+        gsap.to(shape.rotation, { y: Math.PI * 2, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1.5 } });
 
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
