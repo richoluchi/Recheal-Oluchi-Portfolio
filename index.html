@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recheal Oluchi | AI Growth Engineer</title>
+    <title>Recheal Oluchi | AI Video Creator & Growth Strategist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -12,9 +12,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
         body { margin: 0; background-color: #030305; color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
         canvas { position: fixed; top: 0; left: 0; outline: none; z-index: -1; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s ease; }
         .text-gradient { background: linear-gradient(to right, #ff71ce, #01cdfe, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .border-pink { border-color: #ff71ce; }
+        .btn-primary { background: #ff71ce; color: black; font-weight: 800; padding: 1rem 2rem; rounded-full; transition: transform 0.3s ease; }
+        .btn-primary:hover { transform: scale(1.05); background: #f896d8; }
     </style>
 </head>
 <body>
@@ -22,115 +23,161 @@
     <canvas id="bg"></canvas>
 
     <main class="relative z-10">
-        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24">
-            <div class="text-xl font-bold tracking-tighter">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
-            <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest">LinkedIn</a>
+        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24 bg-black/20 backdrop-blur-md">
+            <div class="text-xl font-bold tracking-tighter uppercase">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
+            <a href="mailto:rechealoluchi031@gmail.com" class="glass px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest border-[#ff71ce]/30">Work With Me</a>
         </nav>
 
-        <section class="h-screen flex flex-col justify-center px-6 md:px-24">
-            <h2 class="text-[#01cdfe] font-mono mb-4 tracking-[0.3em] uppercase text-sm">Founder of Olurich Digital World</h2>
-            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-[0.95]">
-                TURNING AI INTO <br> <span class="text-gradient">VISIBILITY.</span>
+        <section class="min-h-screen flex flex-col justify-center px-6 md:px-24 pt-20">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight max-w-4xl">
+                I Create Engaging <br> <span class="text-gradient">Podcast & Social Media Videos</span> Using AI
             </h1>
-            <p class="max-w-xl text-gray-300 text-lg mb-8 leading-relaxed">
-                I help brands and organizations turn AI tools into growth and income. From 0 to 100 subscribers in 12 days—I master the algorithm so you don't have to.
+            <p class="max-w-2xl text-gray-400 text-xl mb-10 leading-relaxed">
+                I help brands turn ideas into scroll-stopping videos that capture attention, increase engagement, and keep their audience watching.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="mailto:rechealoluchi031@gmail.com" class="bg-[#ff71ce] text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition duration-300">Hire Me</a>
-                <a href="https://www.youtube.com/@Rechiq_AI" target="_blank" class="glass px-8 py-4 rounded-full font-bold hover:bg-white/10 transition">Watch My AI Podcast</a>
+                <a href="#work" class="bg-[#ff71ce] text-black px-10 py-4 rounded-full font-extrabold uppercase tracking-wide hover:scale-105 transition">View My Work</a>
+                <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-10 py-4 rounded-full font-bold uppercase tracking-wide">LinkedIn Profile</a>
             </div>
         </section>
 
-        <section class="py-24 px-6 md:px-24">
+        <section id="work" class="py-24 px-6 md:px-24">
+            <div class="mb-12">
+                <h2 class="text-4xl font-bold mb-4">Watch What I Create</h2>
+                <p class="text-gray-500 max-w-xl">AI-powered videos designed to help brands communicate better and stand out online.</p>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl border-l-4 border-[#01cdfe]">
-                    <h3 class="text-[#01cdfe] text-4xl font-bold mb-2">250+</h3>
-                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Professionals Trained</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-l-4 border-[#ff71ce]">
-                    <h3 class="text-[#ff71ce] text-4xl font-bold mb-2">2.3K+</h3>
-                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Peak Video Views</p>
-                </div>
-                <div class="glass p-8 rounded-3xl border-l-4 border-white">
-                    <h3 class="text-white text-4xl font-bold mb-2">12 Days</h3>
-                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Growth Velocity</p>
-                </div>
-            </div>
-        </section>
+                <a href="https://youtube.com/shorts/vQRZsejThtE" target="_blank" class="glass group p-4 rounded-[2.5rem] block">
+                    <div class="aspect-[9/16] bg-black rounded-[2rem] overflow-hidden relative">
+                        <img src="https://i.ytimg.com/vi/vQRZsejThtE/hqdefault.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center pl-1">▶</div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-1">Viral AI Scripting</h4>
+                        <p class="text-xs text-blue-400 uppercase tracking-widest font-bold">High-Retention Content</p>
+                    </div>
+                </a>
 
-        <section class="py-24 px-6 md:px-24">
-            <h3 class="text-3xl font-bold mb-10">Professional <span class="text-[#01cdfe]">Impact</span></h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="glass p-8 rounded-3xl">
-                    <h4 class="text-xl font-bold mb-2 text-[#ff71ce]">StoryX Lab</h4>
-                    <p class="text-gray-400">Facilitated high-impact virtual training sessions, simplifying AI concepts for effective participant engagement.</p>
-                </div>
-                <div class="glass p-8 rounded-3xl">
-                    <h4 class="text-xl font-bold mb-2 text-[#01cdfe]">DigiTech Force Academy</h4>
-                    <p class="text-gray-400">Led strategic AI tutorials and training sessions to empower beginners in applying AI tools for growth.</p>
+                <a href="https://youtube.com/shorts/iJ2atlf5CDs" target="_blank" class="glass group p-4 rounded-[2.5rem] block">
+                    <div class="aspect-[9/16] bg-black rounded-[2rem] overflow-hidden relative">
+                        <img src="https://i.ytimg.com/vi/iJ2atlf5CDs/hqdefault.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-[#ff71ce]/20 backdrop-blur-xl rounded-full flex items-center justify-center pl-1">▶</div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-lg mb-1">AI Production Strategy</h4>
+                        <p class="text-xs text-[#ff71ce] uppercase tracking-widest font-bold">Behind The Scenes</p>
+                    </div>
+                </a>
+
+                <div class="glass p-8 rounded-[2.5rem] flex flex-col justify-center text-center border-l-4 border-white">
+                    <h3 class="text-6xl font-black mb-2 text-white">12 DAYS</h3>
+                    <p class="text-gray-400 uppercase tracking-widest font-bold text-sm mb-6">From 0 to 100+ Subs</p>
+                    <p class="text-sm text-gray-500 mb-8 italic">"Documented proof of algorithm mastery and rapid audience acquisition."</p>
+                    <a href="https://www.youtube.com/@MindBenderArenaX" target="_blank" class="text-xs font-bold underline uppercase tracking-widest text-[#01cdfe]">View Growth Case Study</a>
                 </div>
             </div>
         </section>
 
         <section class="py-24 px-6 md:px-24 bg-white/5">
-            <h3 class="text-3xl font-bold mb-12">High-Engagement <span class="text-[#ff71ce]">Productions</span></h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="https://youtube.com/shorts/vQRZsejThtE" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
-                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative">
-                        <img src="https://i.ytimg.com/vi/vQRZsejThtE/hqdefault.jpg" class="w-full h-full object-cover opacity-70">
-                    </div>
-                    <h4 class="font-bold mb-1">Viral AI Scripting</h4>
-                    <p class="text-xs text-[#01cdfe]">Mindset & Growth</p>
-                </a>
-                <a href="https://youtube.com/shorts/iJ2atlf5CDs" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
-                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative">
-                        <img src="https://i.ytimg.com/vi/iJ2atlf5CDs/hqdefault.jpg" class="w-full h-full object-cover opacity-70">
-                    </div>
-                    <h4 class="font-bold mb-1">AI Behind The Scenes</h4>
-                    <p class="text-xs text-[#ff71ce]">Production Strategy</p>
-                </a>
-                <a href="https://www.youtube.com/@MindBenderArenaX" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
-                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative flex flex-col items-center justify-center text-center p-6">
-                        <span class="text-[#01cdfe] font-black text-4xl mb-2">2.3K+</span>
-                        <span class="text-xs uppercase tracking-widest">Views Proof</span>
-                    </div>
-                    <h4 class="font-bold mb-1">MindBender Arena X</h4>
-                    <p class="text-xs text-white">Algorithm Mastering</p>
-                </a>
+            <h2 class="text-4xl font-bold mb-12">How I Help Brands Grow</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 glass rounded-2xl">
+                    <h4 class="font-bold text-[#ff71ce] mb-3">AI Podcast Editing</h4>
+                    <p class="text-sm text-gray-400">Turning long-form audio into engaging visual podcast experiences.</p>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <h4 class="font-bold text-[#01cdfe] mb-3">Short-Form Content</h4>
+                    <p class="text-sm text-gray-400">Viral-ready Reels, TikToks, and Shorts optimized for retention.</p>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <h4 class="font-bold text-white mb-3">Content Repurposing</h4>
+                    <p class="text-sm text-gray-400">Transforming single videos into weeks of social media assets.</p>
+                </div>
+                <div class="p-6 glass rounded-2xl">
+                    <h4 class="font-bold text-[#ff71ce] mb-3">AI Facilitation</h4>
+                    <p class="text-sm text-gray-400">Training teams to master AI tools for internal production.</p>
+                </div>
             </div>
         </section>
 
-        <footer class="py-24 text-center">
-            <p class="text-gray-500 uppercase tracking-widest text-xs mb-4">Let's Build Your Digital Reality</p>
-            <h2 class="text-2xl md:text-4xl font-bold text-[#ff71ce]">rechealoluchi031@gmail.com</h2>
-        </footer>
+        <section class="py-24 px-6 md:px-24">
+            <h2 class="text-3xl font-bold mb-12">Who I've Worked With</h2>
+            <div class="space-y-4">
+                <div class="glass p-8 rounded-3xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">StoryX Lab</h4>
+                        <p class="text-gray-500">Breaking down complex AI concepts into engaging, simple lessons.</p>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-[#01cdfe] bg-[#01cdfe]/10 px-4 py-1 rounded-full">Virtual Facilitator</span>
+                </div>
+                <div class="glass p-8 rounded-3xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">DigiTech Force Academy</h4>
+                        <p class="text-gray-500">Guided 250+ beginners in mastering practical AI tools for growth.</p>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-[#ff71ce] bg-[#ff71ce]/10 px-4 py-1 rounded-full">Lead AI Trainer</span>
+                </div>
+                <div class="glass p-8 rounded-3xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Better With Tech</h4>
+                        <p class="text-gray-500">Engineered AI video content to drive significant audience growth.</p>
+                    </div>
+                    <span class="text-xs font-mono uppercase text-white bg-white/10 px-4 py-1 rounded-full">Content Engineer</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 text-center px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-8">Ready to stop <br>the <span class="text-gradient">scroll?</span></h2>
+            <p class="text-gray-500 mb-12 max-w-md mx-auto text-lg">I'm currently booking Social Media Management and Video Production for next quarter.</p>
+            <a href="mailto:rechealoluchi031@gmail.com" class="bg-[#ff71ce] text-black px-12 py-5 rounded-full font-black text-xl hover:scale-110 transition inline-block">Work With Me</a>
+        </section>
     </main>
 
     <script>
+        // --- CLEAN 3D ENVIRONMENT ---
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true, alpha: true });
-        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.position.setZ(30);
 
-        const geometry = new THREE.TorusKnotGeometry(10, 3, 200, 32);
-        const material = new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 0.1, roughness: 0.05, transmission: 0.9, thickness: 3, transparent: true, opacity: 0.8 });
-        const torusKnot = new THREE.Mesh(geometry, material);
-        scene.add(torusKnot);
+        // Professional Geometric Shape
+        const geometry = new THREE.TorusKnotGeometry(12, 2.5, 150, 20);
+        const material = new THREE.MeshPhysicalMaterial({ 
+            color: 0xffffff, 
+            metalness: 0.2, 
+            roughness: 0.1, 
+            transmission: 0.8, 
+            thickness: 2, 
+            transparent: true, 
+            opacity: 0.5 
+        });
+        const shape = new THREE.Mesh(geometry, material);
+        scene.add(shape);
 
-        const pinkLight = new THREE.PointLight(0xff71ce, 20); pinkLight.position.set(20, 10, 10); scene.add(pinkLight);
-        const blueLight = new THREE.PointLight(0x01cdfe, 20); blueLight.position.set(-20, -10, 10); scene.add(blueLight);
+        // Soft Lighting (Pink & Blue)
+        const pLight = new THREE.PointLight(0xff71ce, 25); pLight.position.set(20, 10, 15); scene.add(pLight);
+        const bLight = new THREE.PointLight(0x01cdfe, 25); bLight.position.set(-20, -10, 15); scene.add(bLight);
+        const amb = new THREE.AmbientLight(0xffffff, 0.2); scene.add(amb);
 
         function animate() {
             requestAnimationFrame(animate);
-            torusKnot.rotation.x += 0.003;
-            torusKnot.rotation.y += 0.003;
+            shape.rotation.y += 0.002;
+            shape.rotation.x += 0.001;
             renderer.render(scene, camera);
         }
 
+        // Smooth GSAP Scroll
         gsap.registerPlugin(ScrollTrigger);
-        gsap.to(torusKnot.rotation, { y: Math.PI * 4, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
+        gsap.to(shape.rotation, { z: Math.PI, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
+        gsap.to(camera.position, { z: 45, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
 
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
