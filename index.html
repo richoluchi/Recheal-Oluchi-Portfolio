@@ -1,141 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Video Strategist Portfolio</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    body {
-      background: #0b0f1a;
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recheal Oluchi | AI Video Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        body { margin: 0; background-color: #030305; color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        canvas { position: fixed; top: 0; left: 0; outline: none; z-index: -1; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(to right, #ff71ce, #01cdfe, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-pink { background: #ff71ce; color: black; transition: all 0.3s ease; box-shadow: 0 0 20px rgba(255, 113, 206, 0.3); }
+        .btn-pink:hover { transform: translateY(-3px); box-shadow: 0 0 30px rgba(255, 113, 206, 0.6); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
 </head>
+<body>
 
-<body class="px-6 md:px-20 py-10">
+    <canvas id="bg"></canvas>
 
-  <!-- HERO SECTION -->
-  <section class="text-center">
+    <main class="relative z-10">
+        <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24 bg-black/40 backdrop-blur-md border-b border-white/5">
+            <div class="text-xl font-black tracking-tighter uppercase">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
+            <div class="flex gap-4">
+                <a href="mailto:rechealoluchi031@gmail.com" class="text-xs font-bold uppercase text-[#01cdfe] border border-[#01cdfe]/30 px-5 py-2 rounded-full hover:bg-[#01cdfe]/10 transition">Work With Me</a>
+            </div>
+        </nav>
 
-    <!-- VIDEO -->
-    <div class="w-full flex justify-center mb-8">
-      <iframe 
-        class="w-full max-w-4xl h-[220px] md:h-[480px] rounded-2xl shadow-2xl"
-        src="https://www.youtube.com/embed/P1myORd0TAk"
-        title="Portfolio Video"
-        frameborder="0"
-        allowfullscreen>
-      </iframe>
-    </div>
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 md:px-24 pt-32">
+            <div class="w-full max-w-4xl mb-12 transform transition duration-700 hover:scale-[1.02]">
+                <div class="video-container shadow-2xl shadow-[#ff71ce]/20">
+                    <iframe src="https://www.youtube.com/embed/vQRZsejThtE" title="Recheal Oluchi AI Portfolio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
 
-    <!-- HEADLINE -->
-    <h1 class="text-3xl md:text-5xl font-bold leading-tight">
-      I create high-retention videos that grow brands using AI.
-    </h1>
+            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight max-w-5xl">
+                I Create High-Retention <br> <span class="text-gradient">AI-Powered Videos</span> That Grow Brands.
+            </h1>
+            
+            <p class="mt-4 text-gray-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                Proven results: **0 → 100 subscribers in 10 days** • **250+ people trained** • High-growth content systems for podcasts and brands.
+            </p>
 
-    <!-- SUBTEXT -->
-    <p class="mt-4 text-gray-300 text-lg max-w-2xl mx-auto">
-      Proven results: 0 → 100 subscribers in 10 days • 250+ people trained • AI-powered content systems
-    </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#work" class="btn-pink px-10 py-4 rounded-full font-black uppercase tracking-wide">See Case Studies</a>
+                <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-10 py-4 rounded-full font-bold uppercase tracking-wide border-white/20 hover:bg-white/10 transition">LinkedIn Profile</a>
+            </div>
+        </section>
 
-    <!-- CTA -->
-    <div class="mt-8">
-      <a href="#work" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition">
-        See My Work
-      </a>
-    </div>
-  </section>
+        <section class="py-12 bg-white/5 border-y border-white/10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-24 text-center">
+                <div class="flex flex-col">
+                    <span class="text-5xl font-black text-[#ff71ce]">0 → 100</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500 mt-2">Subs in 10 Days</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl font-black text-[#01cdfe]">250+</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500 mt-2">Professionals Trained</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-5xl font-black text-white">2.3K+</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500 mt-2">Views Per Video</span>
+                </div>
+            </div>
+        </section>
 
-  <!-- RESULT STRIP -->
-  <section class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <section id="work" class="py-24 px-6 md:px-24">
+            <h2 class="text-4xl md:text-6xl font-black mb-16">Featured <span class="text-[#01cdfe]">Case Study</span></h2>
+            
+            <div class="glass p-8 md:p-16 rounded-[3rem] border-[#ff71ce]/20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-10 opacity-5 text-9xl font-black">AI</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">MindBender Arena X</h3>
+                        <p class="text-gray-400 mb-8 text-lg">
+                            I built a content engine using AI-puzzles that cracked the algorithm. Scaling from zero to 100+ subscribers in 12 days, I optimized every hook for maximum retention and replayability.
+                        </p>
+                        <ul class="space-y-4 text-sm font-bold">
+                            <li class="flex items-center gap-3"><span class="text-[#ff71ce]">✔</span> 2.3K+ Organic Views Per Clip</li>
+                            <li class="flex items-center gap-3"><span class="text-[#ff71ce]">✔</span> Automated High-Fidelity Editing</li>
+                            <li class="flex items-center gap-3"><span class="text-[#ff71ce]">✔</span> Engineered Audience Engagement</li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="https://youtube.com/shorts/iJ2atlf5CDs" target="_blank" class="rounded-2xl overflow-hidden border border-white/10 hover:border-[#ff71ce] transition">
+                            <img src="https://i.ytimg.com/vi/iJ2atlf5CDs/hqdefault.jpg" class="w-full h-full object-cover">
+                        </a>
+                        <a href="https://youtube.com/shorts/hd10U3egr8w" target="_blank" class="rounded-2xl overflow-hidden border border-white/10 hover:border-[#01cdfe] transition">
+                            <img src="https://i.ytimg.com/vi/hd10U3egr8w/hqdefault.jpg" class="w-full h-full object-cover">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="bg-white/10 p-6 rounded-xl">
-      <h2 class="text-2xl font-bold">0 → 100</h2>
-      <p class="text-gray-300">Subscribers in 10 days</p>
-    </div>
+        <section class="py-24 px-6 md:px-24 bg-white/5">
+            <h2 class="text-4xl font-black mb-12 text-center">Elite <span class="text-gradient">AI Solutions</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass p-8 rounded-3xl border-t-2 border-[#ff71ce]">
+                    <h4 class="font-black mb-4">AI Video Strategy</h4>
+                    <p class="text-sm text-gray-500 italic">"Engineering the viral hook."</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border-t-2 border-[#01cdfe]">
+                    <h4 class="font-black mb-4">Podcast Production</h4>
+                    <p class="text-sm text-gray-500 italic">"High-fidelity visual storytelling."</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border-t-2 border-white">
+                    <h4 class="font-black mb-4">Short-Form Content</h4>
+                    <p class="text-sm text-gray-500 italic">"Reels, TikToks, Shorts that convert."</p>
+                </div>
+                <div class="glass p-8 rounded-3xl border-t-2 border-[#ff71ce]">
+                    <h4 class="font-black mb-4">AI Training</h4>
+                    <p class="text-sm text-gray-500 italic">"Empowering brands with tools."</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="bg-white/10 p-6 rounded-xl">
-      <h2 class="text-2xl font-bold">250+</h2>
-      <p class="text-gray-300">People trained in AI content</p>
-    </div>
+        <section class="py-40 px-6 text-center">
+            <h2 class="text-4xl md:text-7xl font-black mb-10 leading-tight">
+                Let's create content your <br>audience <span class="text-gradient">won't scroll past.</span>
+            </h2>
+            <a href="mailto:rechealoluchi031@gmail.com" class="btn-pink px-16 py-6 rounded-full font-black text-2xl tracking-tighter">Work With Me</a>
+        </section>
 
-    <div class="bg-white/10 p-6 rounded-xl">
-      <h2 class="text-2xl font-bold">2.3K+</h2>
-      <p class="text-gray-300">Views per optimized video</p>
-    </div>
+        <footer class="py-12 border-t border-white/10 text-center text-gray-600 text-xs uppercase tracking-[0.5em]">
+            © 2026 Recheal Oluchi • AI Growth Strategist
+        </footer>
+    </main>
 
-  </section>
+    <script>
+        // --- 3D INTERACTIVE BACKGROUND ---
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true, alpha: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.position.setZ(30);
 
-  <!-- ABOUT / POSITIONING -->
-  <section class="mt-20 max-w-4xl mx-auto text-center">
+        const geometry = new THREE.TorusKnotGeometry(12, 3, 200, 20);
+        const material = new THREE.MeshPhysicalMaterial({ 
+            color: 0xffffff, metalness: 0.2, roughness: 0.1, transmission: 0.9, thickness: 3, transparent: true, opacity: 0.6 
+        });
+        const shape = new THREE.Mesh(geometry, material);
+        scene.add(shape);
 
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">What I Do</h2>
+        // Lighting System
+        const pLight = new THREE.PointLight(0xff71ce, 20); pLight.position.set(20, 10, 15); scene.add(pLight);
+        const bLight = new THREE.PointLight(0x01cdfe, 20); bLight.position.set(-20, -10, 15); scene.add(bLight);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.2));
 
-    <p class="text-gray-300 text-lg leading-relaxed">
-      I don’t just create content. I design attention systems using AI, storytelling, and video psychology to help brands
-      turn ideas into scroll-stopping videos that drive engagement and growth.
-    </p>
+        function animate() {
+            requestAnimationFrame(animate);
+            shape.rotation.y += 0.002;
+            shape.rotation.x += 0.001;
+            renderer.render(scene, camera);
+        }
 
-  </section>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(shape.rotation, { z: Math.PI, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
+        gsap.to(camera.position, { z: 50, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
 
-  <!-- CASE STUDY -->
-  <section id="work" class="mt-20">
-
-    <h2 class="text-3xl font-bold text-center mb-10">Featured Case Study</h2>
-
-    <div class="bg-white/5 p-8 rounded-2xl max-w-4xl mx-auto">
-
-      <h3 class="text-xl font-semibold mb-4">MindBender Arena X</h3>
-
-      <ul class="text-gray-300 space-y-2">
-        <li>• Built a content system using AI-powered puzzle videos</li>
-        <li>• Grew from 0 to 100+ subscribers in 10 days</li>
-        <li>• Achieved 2.3K+ organic views per video</li>
-        <li>• Optimized hooks for retention and replayability</li>
-      </ul>
-
-    </div>
-
-  </section>
-
-  <!-- SERVICES -->
-  <section class="mt-20 text-center">
-
-    <h2 class="text-3xl font-bold mb-10">Services</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-
-      <div class="bg-white/10 p-6 rounded-xl">AI Video Editing</div>
-      <div class="bg-white/10 p-6 rounded-xl">Podcast Content Creation</div>
-      <div class="bg-white/10 p-6 rounded-xl">Short-form Content (Reels, TikTok, Shorts)</div>
-      <div class="bg-white/10 p-6 rounded-xl">AI Content Strategy</div>
-
-    </div>
-
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="mt-24 text-center">
-
-    <h2 class="text-3xl font-bold mb-4">
-      Let’s create content your audience won’t scroll past.
-    </h2>
-
-    <a href="mailto:your-email@example.com"
-       class="inline-block mt-6 bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-300 transition">
-      Work With Me
-    </a>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="mt-20 text-center text-gray-500 text-sm">
-    © 2026 AI Video Strategist Portfolio. All rights reserved.
-  </footer>
-
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        animate();
+    </script>
 </body>
 </html>
