@@ -3,27 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recheal Oluchi | AI Content & Growth Specialist</title>
+    <title>Recheal Oluchi | AI Growth Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.161.0/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
-        
         body { margin: 0; background-color: #030305; color: white; overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
         canvas { position: fixed; top: 0; left: 0; outline: none; z-index: -1; }
-        
-        /* Color Palette & UI Elements */
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+        .glass:hover { background: rgba(255, 255, 255, 0.08); border-color: #ff71ce; }
         .text-gradient { background: linear-gradient(to right, #ff71ce, #01cdfe, #fff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .border-pink { border-color: #ff71ce; }
-        .bg-pink { background-color: #ff71ce; }
-        .text-pink { color: #ff71ce; }
-        .text-blue { color: #01cdfe; }
-        
-        .video-card { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-        .video-card:hover { transform: scale(1.02); }
+        .stat-card { border-left: 4px solid #01cdfe; }
     </style>
 </head>
 <body>
@@ -32,168 +24,120 @@
 
     <main class="relative z-10">
         <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-24">
-            <div class="text-xl font-bold tracking-tighter">RECHEAL <span class="text-pink">OLUCHI</span></div>
-            <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-5 py-2 rounded-full text-sm font-bold hover:bg-white/10 transition">LinkedIn ↗</a>
+            <div class="text-xl font-bold tracking-tighter">RECHEAL <span class="text-[#ff71ce]">OLUCHI</span></div>
+            <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/recheal-oluchi" target="_blank" class="glass px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest">LinkedIn</a>
+            </div>
         </nav>
 
         <section class="h-screen flex flex-col justify-center px-6 md:px-24">
-            <h2 class="text-blue font-mono mb-4 tracking-[0.3em] uppercase text-sm">Olurich Digital World</h2>
+            <h2 class="text-[#01cdfe] font-mono mb-4 tracking-[0.3em] uppercase text-sm">Founder of Olurich Digital World</h2>
             <h1 class="text-5xl md:text-8xl font-black mb-6 leading-[0.95]">
-                AI FOR <br> <span class="text-gradient">VISIBILITY & GROWTH.</span>
+                TURNING AI INTO <br> <span class="text-gradient">VISIBILITY.</span>
             </h1>
             <p class="max-w-xl text-gray-300 text-lg mb-8">
-                Helping brands and professionals turn AI tools into scalable income and presence. 
-                Founder, AI Educator, and Creator.
+                I help brands and organizations turn AI tools into growth and income. From 0 to 100 subscribers in 12 days—I master the algorithm so you don't have to.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="https://www.youtube.com/@Rechiq_AI" target="_blank" class="bg-pink text-black px-8 py-4 rounded-full font-bold hover:opacity-90 transition">Watch My AI Podcast</a>
-                <a href="mailto:rechealoluchi031@gmail.com" class="glass px-8 py-4 rounded-full font-bold hover:bg-white/10 transition">Let's Collaborate</a>
+                <a href="mailto:rechealoluchi031@gmail.com" class="bg-[#ff71ce] text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition duration-300">Hire Me</a>
+                <a href="#growth" class="glass px-8 py-4 rounded-full font-bold hover:bg-white/10 transition">View Growth Results</a>
             </div>
         </section>
 
-        <section class="py-24 px-6 md:px-24">
+        <section id="growth" class="py-24 px-6 md:px-24">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-blue text-3xl font-bold mb-2">250+</h3>
-                    <p class="text-gray-400">Individuals trained in AI tools and digital literacy across Africa.</p>
+                <div class="glass p-8 rounded-3xl stat-card">
+                    <h3 class="text-[#01cdfe] text-4xl font-bold mb-2">250+</h3>
+                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Professionals Trained</p>
+                    <p class="text-sm text-gray-500 mt-2">Empowering experts across Africa with AI literacy.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl border-pink">
-                    <h3 class="text-pink text-3xl font-bold mb-2">AI-Video</h3>
-                    <p class="text-gray-400">Expertise in high-retention podcast production and promotional content.</p>
+                <div class="glass p-8 rounded-3xl border-l-4 border-[#ff71ce]">
+                    <h3 class="text-[#ff71ce] text-4xl font-bold mb-2">2.3K+</h3>
+                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Peak Video Views</p>
+                    <p class="text-sm text-gray-500 mt-2">High-retention AI content engineered for virality.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-white text-3xl font-bold mb-2">Growth</h3>
-                    <p class="text-gray-400">Proven track record in social media management and audience engagement.</p>
+                <div class="glass p-8 rounded-3xl border-l-4 border-white">
+                    <h3 class="text-white text-4xl font-bold mb-2">12 Days</h3>
+                    <p class="text-gray-400 font-bold uppercase text-xs tracking-widest">Growth Velocity</p>
+                    <p class="text-sm text-gray-500 mt-2">Scaling channels from scratch to 100+ subs rapidly.</p>
                 </div>
             </div>
         </section>
 
         <section class="py-24 px-6 md:px-24 bg-white/5">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                    <h3 class="text-4xl font-bold mb-4">Latest From <span class="text-pink">Rechiq AI</span></h3>
-                    <p class="text-gray-400 max-w-lg">Mastering AI concepts through simplified tutorials and expert podcast sessions.</p>
-                </div>
-                <a href="https://www.youtube.com/@Rechiq_AI" target="_blank" class="text-blue font-bold border-b-2 border-blue pb-1">View Channel</a>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="video-card glass p-4 rounded-3xl">
-                    <div class="aspect-video bg-gray-900 rounded-2xl mb-4 overflow-hidden flex items-center justify-center">
-                         <span class="text-gray-600">AI Podcast Production</span>
+            <h3 class="text-3xl font-bold mb-12">Featured <span class="text-[#ff71ce]">AI Productions</span></h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <a href="https://youtube.com/shorts/vQRZsejThtE" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
+                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative">
+                        <img src="https://i.ytimg.com/vi/vQRZsejThtE/hqdefault.jpg" class="w-full h-full object-cover opacity-70" alt="Video 1">
+                        <div class="absolute bottom-4 left-4 bg-black/60 px-3 py-1 rounded-lg text-xs">AI Avatar</div>
                     </div>
-                    <h4 class="text-xl font-bold">Better With Tech Collaboration</h4>
-                    <p class="text-sm text-gray-400">Creating engaging AI videos to drive social media growth.</p>
-                </div>
-                <div class="video-card glass p-4 rounded-3xl">
-                    <div class="aspect-video bg-gray-900 rounded-2xl mb-4 overflow-hidden flex items-center justify-center">
-                        <span class="text-gray-600">AI Training Tutorials</span>
+                    <h4 class="font-bold mb-1">The Discomfort Paradox</h4>
+                    <p class="text-xs text-[#01cdfe]">High-Engagement Scripting</p>
+                </a>
+
+                <a href="https://youtube.com/shorts/iJ2atlf5CDs" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
+                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative">
+                        <img src="https://i.ytimg.com/vi/iJ2atlf5CDs/hqdefault.jpg" class="w-full h-full object-cover opacity-70" alt="Video 2">
+                        <div class="absolute bottom-4 left-4 bg-black/60 px-3 py-1 rounded-lg text-xs">Production</div>
                     </div>
-                    <h4 class="text-xl font-bold">Analytica Haven Sessions</h4>
-                    <p class="text-sm text-gray-400">Simplifying complex AI concepts for global beginners.</p>
-                </div>
+                    <h4 class="font-bold mb-1">Behind The Scenes AI</h4>
+                    <p class="text-xs text-[#ff71ce]">Process & Strategy</p>
+                </a>
+
+                <a href="https://www.youtube.com/@MindBenderArenaX" target="_blank" class="glass p-4 rounded-3xl block hover:scale-105 transition">
+                    <div class="aspect-[9/16] bg-gray-900 rounded-2xl mb-4 overflow-hidden relative">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                            <span class="text-[#01cdfe] font-black text-4xl mb-2">2.3K+</span>
+                            <span class="text-xs uppercase tracking-tighter">Views Per Video</span>
+                        </div>
+                    </div>
+                    <h4 class="font-bold mb-1">MindBender Arena X</h4>
+                    <p class="text-xs text-white">Algorithm Case Study</p>
+                </a>
+
             </div>
         </section>
 
-        <section class="h-screen flex flex-col items-center justify-center px-6 text-center">
-            <h2 class="text-4xl md:text-6xl font-bold mb-8">Ready to transform <br>your <span class="text-blue">brand?</span></h2>
-            <p class="text-gray-400 mb-12 max-w-md">Currently booking AI Training and Social Media Management for 2026.</p>
-            <a href="mailto:rechealoluchi031@gmail.com" class="text-2xl md:text-4xl font-bold text-pink hover:scale-105 transition duration-300">rechealoluchi031@gmail.com</a>
-            
-            <div class="mt-24 flex gap-8">
-                <a href="https://www.linkedin.com/in/recheal-oluchi" class="text-gray-500 hover:text-white transition">LinkedIn</a>
-                <a href="https://www.youtube.com/@Rechiq_AI" class="text-gray-500 hover:text-white transition">YouTube</a>
-            </div>
+        <section class="py-24 text-center">
+            <h2 class="text-4xl font-bold mb-6 italic">rechealoluchi031@gmail.com</h2>
+            <p class="text-gray-500 uppercase tracking-widest text-xs">Available for AI Social Media Management & Content Strategy</p>
         </section>
     </main>
 
     <script>
-        // --- 3D SCENE SETUP ---
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({
-            canvas: document.querySelector('#bg'),
-            antialias: true,
-            alpha: true
-        });
-
+        const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg'), antialias: true, alpha: true });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         camera.position.setZ(30);
 
-        // --- THE "AI CORE" OBJECT (TORUS KNOT) ---
         const geometry = new THREE.TorusKnotGeometry(10, 3, 200, 32);
-        const material = new THREE.MeshPhysicalMaterial({
-            color: 0xffffff,
-            metalness: 0.1,
-            roughness: 0.05,
-            transmission: 0.9, // Frosted Glass
-            thickness: 3,
-            transparent: true,
-            opacity: 0.8
-        });
+        const material = new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 0.1, roughness: 0.05, transmission: 0.9, thickness: 3, transparent: true, opacity: 0.8 });
         const torusKnot = new THREE.Mesh(geometry, material);
         scene.add(torusKnot);
 
-        // --- PINK & BLUE LIGHTING ---
-        const pinkLight = new THREE.PointLight(0xff71ce, 15, 100); // PINK
-        pinkLight.position.set(20, 10, 10);
-        scene.add(pinkLight);
+        const pinkLight = new THREE.PointLight(0xff71ce, 20); pinkLight.position.set(20, 10, 10); scene.add(pinkLight);
+        const blueLight = new THREE.PointLight(0x01cdfe, 20); blueLight.position.set(-20, -10, 10); scene.add(blueLight);
 
-        const blueLight = new THREE.PointLight(0x01cdfe, 15, 100); // BLUE
-        blueLight.position.set(-20, -10, 10);
-        scene.add(blueLight);
-
-        const whiteLight = new THREE.DirectionalLight(0xffffff, 2); // WHITE RIM LIGHT
-        whiteLight.position.set(0, 0, 5);
-        scene.add(whiteLight);
-
-        // --- ANIMATION LOOP ---
         function animate() {
             requestAnimationFrame(animate);
             torusKnot.rotation.x += 0.003;
             torusKnot.rotation.y += 0.003;
-            torusKnot.rotation.z += 0.001;
-            
-            // Subtle "breathing" effect
-            const time = Date.now() * 0.001;
-            torusKnot.scale.setScalar(1 + Math.sin(time) * 0.05);
-
             renderer.render(scene, camera);
         }
 
-        // --- SCROLL ANIMATIONS (GSAP) ---
         gsap.registerPlugin(ScrollTrigger);
+        gsap.to(torusKnot.rotation, { y: Math.PI * 4, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
+        gsap.to(camera.position, { z: 50, scrollTrigger: { trigger: "body", start: "top top", end: "bottom bottom", scrub: 1 } });
 
-        // Push camera back on scroll
-        gsap.to(camera.position, {
-            z: 50,
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1
-            }
-        });
-
-        // Rotate object faster on scroll
-        gsap.to(torusKnot.rotation, {
-            y: Math.PI * 4,
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1
-            }
-        });
-
-        // Handle Resize
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
-
         animate();
     </script>
 </body>
