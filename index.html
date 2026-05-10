@@ -31,7 +31,14 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--white);
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(18,81,197,.08) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 85% 8%, rgba(236,72,153,.06) 0%, transparent 50%),
+    radial-gradient(ellipse 45% 55% at 5% 65%, rgba(37,99,235,.07) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 95% 80%, rgba(236,72,153,.07) 0%, transparent 50%),
+    radial-gradient(ellipse 35% 35% at 50% 50%, rgba(18,81,197,.04) 0%, transparent 60%),
+    #F0F5FF;
+  background-attachment: fixed;
   color:var(--ink);
   font-family:var(--body);
   overflow-x:hidden;
@@ -44,23 +51,13 @@ body{
 @media(hover:none){#cur,#curR{display:none}body{cursor:auto}}
 
 /* MESH GRADIENT BACKGROUND */
-.mesh{
-  position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:
-    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(18,81,197,.07) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(236,72,153,.05) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 60% at 0% 60%, rgba(37,99,235,.06) 0%, transparent 50%),
-    radial-gradient(ellipse 70% 40% at 100% 80%, rgba(236,72,153,.06) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 40% at 50% 100%, rgba(18,81,197,.05) 0%, transparent 50%);
-}
-/* Animated grid */
+.mesh{display:none}
 .grid-bg{
   position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:
-    linear-gradient(rgba(18,81,197,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(18,81,197,.035) 1px, transparent 1px);
+    linear-gradient(rgba(18,81,197,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18,81,197,.03) 1px, transparent 1px);
   background-size:64px 64px;
-  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
 }
 
 /* NAV */
@@ -160,7 +157,7 @@ nav.up{box-shadow:var(--sh-md)}
   grid-template-columns:1fr 1fr;
   gap:64px;
   align-items:center;
-  background:var(--white);
+  background:transparent;
 }
 .hero-left{}
 .hero-badge{
@@ -289,7 +286,7 @@ section{position:relative;z-index:1}
 .stitle .pk{color:var(--pink)}
 
 /* ABOUT */
-.about-s{background:var(--off)}
+.about-s{background:rgba(240,245,255,.7);backdrop-filter:blur(2px)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
 .abt-text p{font-size:.97rem;line-height:1.85;color:var(--ink-mid);margin-bottom:16px}
 .abt-text p strong{color:var(--ink)}
@@ -338,7 +335,7 @@ section{position:relative;z-index:1}
 }
 
 /* SERVICES */
-.srv-s{background:var(--white)}
+.srv-s{background:rgba(255,255,255,.6);backdrop-filter:blur(2px)}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
 .srv-card{
   background:var(--off);border:1px solid var(--border);
@@ -361,7 +358,7 @@ section{position:relative;z-index:1}
 .tag{font-size:.68rem;background:var(--blue-light);color:var(--blue);border-radius:20px;padding:3px 9px;font-weight:500}
 
 /* PROOF */
-.proof-s{background:var(--off)}
+.proof-s{background:rgba(240,245,255,.7);backdrop-filter:blur(2px)}
 .proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:52px}
 .pcard{
   background:var(--white);border:1px solid var(--border);
@@ -397,7 +394,7 @@ section{position:relative;z-index:1}
 .phi a{color:inherit;font-weight:700}
 
 /* EXPERIENCE */
-.exp-s{background:var(--white)}
+.exp-s{background:rgba(255,255,255,.6);backdrop-filter:blur(2px)}
 .exp-tl{margin-top:52px;position:relative}
 .exp-tl::before{
   content:'';position:absolute;left:0;top:8px;bottom:0;
@@ -420,7 +417,7 @@ section{position:relative;z-index:1}
 .edesc{font-size:.875rem;color:var(--ink-light);line-height:1.75;max-width:580px}
 
 /* YT */
-.yt-s{background:var(--off)}
+.yt-s{background:rgba(240,245,255,.7);backdrop-filter:blur(2px)}
 .yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:52px}
 .yt-card{
   border-radius:18px;overflow:hidden;
@@ -456,7 +453,7 @@ section{position:relative;z-index:1}
 .ybadge.pk{background:var(--pink-light);color:var(--pink)}
 
 /* CONTACT */
-.contact-s{background:var(--white)}
+.contact-s{background:rgba(255,255,255,.6);backdrop-filter:blur(2px)}
 .cnt-inner{max-width:660px;margin:0 auto;text-align:center}
 .cnt-inner .slbl{justify-content:center}
 .cnt-inner .slbl::before{display:none}
